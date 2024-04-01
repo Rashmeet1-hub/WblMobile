@@ -17,7 +17,7 @@ class loginscreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       backgroundColor: color,
       body: SingleChildScrollView(
-        padding: EdgeInsets.only(bottom: 80), // Adjust as needed
+        padding: const EdgeInsets.only(bottom: 80), // Adjust as needed
         child: Padding(
           padding: const EdgeInsets.fromLTRB(45, 114, 44.31, 477),
           child: Column(
@@ -28,7 +28,7 @@ class loginscreen extends StatelessWidget {
                 width: 340.69,
                 // fit: BoxFit.cover,
               ),
-              SizedBox(height: 100),
+              const SizedBox(height: 100),
               TextButton(
                 onPressed: () {
                   // Add your button onPressed logic here
@@ -36,7 +36,7 @@ class loginscreen extends StatelessWidget {
                 style: TextButton.styleFrom(
                     backgroundColor: colorButton,
                     //padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    fixedSize: Size(425, 60.67),
+                    fixedSize: const Size(425, 60.67),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(14))),
                 child: const Text(
@@ -58,7 +58,7 @@ class loginscreen extends StatelessWidget {
                 style: TextButton.styleFrom(
                     backgroundColor: colorButton,
                     //padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    fixedSize: Size(425, 60.67),
+                    fixedSize: const Size(425, 60.67),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(14))),
                 child: const Text(
@@ -80,7 +80,7 @@ class loginscreen extends StatelessWidget {
                 style: TextButton.styleFrom(
                     backgroundColor: colorButton,
                     //padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    fixedSize: Size(425, 60.67),
+                    fixedSize: const Size(425, 60.67),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(14))),
                 child: const Text(

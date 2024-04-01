@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/candidatelogin.dart';
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/loginscreen.dart';
 
 //import 'WBL Pages/Demo Testing Pages/welcome_page_demo.dart';
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const WelcomePage(),
-      home: const loginscreen(),
+      //home: const loginscreen(),
+      home: const candidateLogin(),
     );
   }
 }
