@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const WelcomePage(),
-      home: const loginscreen(),
-      //home: const candidateLogin(),
+      //home: const loginscreen(),
+      home: const candidateLogin(),
     );
   }
 }
