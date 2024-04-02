@@ -38,7 +38,8 @@ class candidateLogin extends StatelessWidget {
             ),
             Form(
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 45, horizontal: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 45, horizontal: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

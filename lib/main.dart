@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/adminlogin.dart';
+import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/adminregisteration.dart';
+
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/candidatelogin.dart';
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/loginscreen.dart';
 
@@ -23,7 +25,9 @@ class MyApp extends StatelessWidget {
       //home: const WelcomePage(),
       //home: const loginscreen(),
       //home: const candidateLogin(),
-      home: const adminLogin(),
+      //home: const adminLogin(),
+
+      home: const adminregisteration(),
     );
   }
 }
