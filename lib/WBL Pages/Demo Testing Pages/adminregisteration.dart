@@ -138,13 +138,147 @@ class adminregisteration extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10),
-              child: const Text(
+            const Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Text(
                 'Basic Information',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
+            const SizedBox(
+              height: 3,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Card(
+                color: colorCard,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 5, 16, 16),
+                  child: Column(children: [
+                    TextFormField(
+                      textCapitalization: TextCapitalization.words,
+                      decoration: InputDecoration(
+                        labelText: 'First Name *',
+                        labelStyle: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          //fontWeight: FontWeight.bold,
+                        ),
+
+                        contentPadding: const EdgeInsets.only(top: 3),
+                        hintText: 'Enter your first name',
+                        hintStyle: const TextStyle(
+                          color: Colors.black,
+                          //fontSize: 16,
+                        ),
+                        enabledBorder: const OutlineInputBorder(
+                            borderSide: BorderSide.none),
+                        // contentPadding: const EdgeInsets.symmetric(
+                        //   vertical: 12.0,
+                        //   horizontal: 16.0,
+                        // ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                          borderSide: const BorderSide(color: Colors.red),
+                        ),
+                      ),
+                      validator: (String? value) {
+                        return (value != null)
+                            ? 'Please Enter your first name'
+                            : null;
+                      },
+                    ),
+                    const SizedBox(
+                      height: 1,
+                    ),
+                    TextFormField(
+                      textCapitalization: TextCapitalization.words,
+                      decoration: InputDecoration(
+                        labelText: 'Last Name ',
+                        labelStyle: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          //fontWeight: FontWeight.bold,
+                        ),
+                        contentPadding: const EdgeInsets.only(top: 3),
+                        hintText: 'Enter your Last name',
+                        hintStyle: const TextStyle(
+                          color: Colors.black,
+                          //fontSize: 16,
+                        ),
+                        enabledBorder: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
+                        // contentPadding: const EdgeInsets.symmetric(
+                        //   vertical: 12.0,
+                        //   horizontal: 16.0,
+                        // ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                          borderSide: const BorderSide(color: Colors.red),
+                        ),
+                      ),
+                    ),
+                    TextFormField(
+                      textCapitalization: TextCapitalization.words,
+                      decoration: InputDecoration(
+                        labelText: 'Designation',
+                        labelStyle: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          //fontWeight: FontWeight.bold,
+                        ),
+
+                        contentPadding: const EdgeInsets.only(top: 3),
+                        hintText: 'Designation',
+                        hintStyle: const TextStyle(
+                          color: Colors.black,
+                          //fontSize: 16,
+                        ),
+                        enabledBorder: const OutlineInputBorder(
+                            borderSide: BorderSide.none),
+                        // contentPadding: const EdgeInsets.symmetric(
+                        //   vertical: 12.0,
+                        //   horizontal: 16.0,
+                        // ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                          borderSide: const BorderSide(color: Colors.red),
+                        ),
+                      ),
+                    ),
+                    TextFormField(
+                      textCapitalization: TextCapitalization.words,
+                      decoration: InputDecoration(
+                        labelText: 'Mobile Number',
+                        labelStyle: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                          //fontWeight: FontWeight.bold,
+                        ),
+
+                        contentPadding: const EdgeInsets.only(top: 3),
+                        hintText: 'Enter your Mobile Number',
+                        hintStyle: const TextStyle(
+                          color: Colors.black,
+                          //fontSize: 16,
+                        ),
+                        enabledBorder: const OutlineInputBorder(
+                            borderSide: BorderSide.none),
+                        // contentPadding: const EdgeInsets.symmetric(
+                        //   vertical: 12.0,
+                        //   horizontal: 16.0,
+                        // ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                          borderSide: const BorderSide(color: Colors.red),
+                        ),
+                      ),
+                    ),
+                  ]),
+                ),
+              ),
+            )
           ],
         ),
       ),
