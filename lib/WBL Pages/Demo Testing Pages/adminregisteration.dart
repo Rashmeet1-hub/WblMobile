@@ -278,6 +278,131 @@ class adminregisteration extends StatelessWidget {
                   ]),
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Text(
+                'Login Details',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ),
+            const SizedBox(
+              height: 3,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Card(
+                color: colorCard,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(16, 5, 16, 16),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        textCapitalization: TextCapitalization.words,
+                        decoration: InputDecoration(
+                          labelText: 'Username *',
+                          labelStyle: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            //fontWeight: FontWeight.bold,
+                          ),
+
+                          contentPadding: const EdgeInsets.only(top: 3),
+                          hintText: 'Enter your Username ',
+                          hintStyle: const TextStyle(
+                            color: Colors.black,
+                            //fontSize: 16,
+                          ),
+                          enabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide.none),
+                          // contentPadding: const EdgeInsets.symmetric(
+                          //   vertical: 12.0,
+                          //   horizontal: 16.0,
+                          // ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            borderSide: const BorderSide(color: Colors.red),
+                          ),
+                        ),
+                        validator: (String? value) {
+                          return (value != null)
+                              ? 'Please Enter your Username'
+                              : null;
+                        },
+                      ),
+                      TextFormField(
+                        textCapitalization: TextCapitalization.words,
+                        decoration: InputDecoration(
+                          labelText: 'Email *',
+                          labelStyle: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            //fontWeight: FontWeight.bold,
+                          ),
+
+                          contentPadding: const EdgeInsets.only(top: 3),
+                          hintText: 'Enter your email ',
+                          hintStyle: const TextStyle(
+                            color: Colors.black,
+                            //fontSize: 16,
+                          ),
+                          enabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide.none),
+                          // contentPadding: const EdgeInsets.symmetric(
+                          //   vertical: 12.0,
+                          //   horizontal: 16.0,
+                          // ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            borderSide: const BorderSide(color: Colors.red),
+                          ),
+                        ),
+                        validator: (String? value) {
+                          return (value != null)
+                              ? 'Please Enter your email'
+                              : null;
+                        },
+                      ),
+                      TextFormField(
+                        textCapitalization: TextCapitalization.words,
+                        decoration: InputDecoration(
+                          labelText: 'Password *',
+                          labelStyle: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 16,
+                            //fontWeight: FontWeight.bold,
+                          ),
+
+                          contentPadding: const EdgeInsets.only(top: 3),
+                          hintText: 'Enter your Password ',
+                          hintStyle: const TextStyle(
+                            color: Colors.black,
+                            //fontSize: 16,
+                          ),
+                          enabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide.none),
+                          // contentPadding: const EdgeInsets.symmetric(
+                          //   vertical: 12.0,
+                          //   horizontal: 16.0,
+                          // ),
+                          focusedErrorBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            borderSide: const BorderSide(color: Colors.red),
+                          ),
+                        ),
+                        validator: (String? value) {
+                          return (value != null)
+                              ? 'Please Enter your Password'
+                              : null;
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             )
           ],
         ),
