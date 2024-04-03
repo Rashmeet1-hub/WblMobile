@@ -16,7 +16,6 @@ String hexColorCard = "#E5F3DD";
 Color colorCard =
     Color(int.parse(hexColorCard.substring(1, 7), radix: 16) + 0xFF000000);
 
-// ignore: camel_case_types
 class adminregisteration extends StatelessWidget {
   const adminregisteration({Key? key});
 
@@ -28,7 +27,7 @@ class adminregisteration extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: colorBar,
         title: const Text(
-          'Registeration',
+          'Registration',
           style: TextStyle(
               color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold),
         ),
@@ -36,6 +35,7 @@ class adminregisteration extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.only(top: 95.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 28, 10, 0),
@@ -48,8 +48,11 @@ class adminregisteration extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Icon(Icons.account_circle_rounded,
-                              size: 90, color: colorButton),
+                          SizedBox(
+                            height: 70,
+                            child: Icon(Icons.account_circle_rounded,
+                                size: 80, color: colorButton),
+                          ),
                           const SizedBox(width: 16),
                           Expanded(
                             child: Column(
@@ -70,26 +73,32 @@ class adminregisteration extends StatelessWidget {
                                     // Your logic here
                                   },
                                   isExpanded: true,
-                                  value: 'Center 1', // Default value
+                                  value: null, // Set value to null for hint
+                                  hint: const Text(
+                                    'Select Center', // Hint text
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 5),
+                      //const SizedBox(height: 10),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment
-                            .end, // Aligns the children to the end (right)
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 97),
+                                  padding: const EdgeInsets.only(left: 90),
                                   child: DropdownButton<String>(
                                     items: <String>[
+                                      'Select Organization', // Placeholder
                                       'C-DAC',
                                       'CERT-IN',
                                       'CMET',
@@ -103,11 +112,17 @@ class adminregisteration extends StatelessWidget {
                                         child: Text(value),
                                       );
                                     }).toList(),
+                                    hint: const Text(
+                                      'Select Organization', // Updated hint text
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
                                     onChanged: (String? newValue) {
                                       // Your logic here
                                     },
                                     isExpanded: true,
-                                    value: 'C-DAC', // Default value
+                                    value: null, // Set value to null for hint
                                   ),
                                 ),
                               ],
@@ -118,6 +133,16 @@ class adminregisteration extends StatelessWidget {
                     ],
                   ),
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: const Text(
+                'Basic Information',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
             ),
           ],
