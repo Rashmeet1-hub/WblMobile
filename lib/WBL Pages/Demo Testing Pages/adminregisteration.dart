@@ -471,6 +471,71 @@ class adminregisteration extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 21),
+                    child: SizedBox(
+                      //width: double.infinity,
+                      width: 160,
+                      child: Container(
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              side: BorderSide(color: colorButton),
+                            ),
+                          ),
+                          child: Text(
+                            'Clear All',
+                            style: TextStyle(
+                              color: colorButton,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 21),
+                    child: SizedBox(
+                      //width: double.infinity,
+                      width: 160,
+                      child: Container(
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: colorButton,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(14),
+                              side: BorderSide(color: colorButton),
+                            ),
+                          ),
+                          child: const Text(
+                            'Submit',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              )
             ],
           ),
         ),
