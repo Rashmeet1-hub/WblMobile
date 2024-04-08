@@ -3,6 +3,7 @@ import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/adminlogin.dart'
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/adminregisteration.dart';
 
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/candidatelogin.dart';
+import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/candidateregisteration.dart';
 import 'package:wblmobileapp/WBL%20Pages/Demo%20Testing%20Pages/loginscreen.dart';
 
 //import 'WBL Pages/Demo Testing Pages/welcome_page_demo.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
       //home: const candidateLogin(),
       //home: const adminLogin(),
 
-      home: const adminregisteration(),
+      //home: const adminregisteration(),
+      home: const candidateregisteration(),
     );
   }
 }

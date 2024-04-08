@@ -441,7 +441,7 @@ class adminregisteration extends StatelessWidget {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(left: 100),
-                                child: const IconButton(
+                                child: IconButton(
                                     onPressed: null,
                                     icon: Icon(Icons.edit_document)),
                               ),
@@ -513,7 +513,7 @@ class adminregisteration extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: colorButton,
+                            backgroundColor: colorBar,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(14),
                               side: BorderSide(color: colorButton),
@@ -533,9 +533,9 @@ class adminregisteration extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
-              )
+              ),
             ],
           ),
         ),
