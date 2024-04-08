@@ -1,3 +1,5 @@
+// ignore: avoid_web_libraries_in_flutter
+
 import 'package:flutter/material.dart';
 import 'package:flutter_signature_pad/flutter_signature_pad.dart';
 
@@ -16,15 +18,23 @@ Color colorBar =
 String hexColorCard = "#E5F3DD";
 Color colorCard =
     Color(int.parse(hexColorCard.substring(1, 7), radix: 16) + 0xFF000000);
-DateTime date = DateTime(2024, 12, 31);
 
 // ignore: camel_case_types
-class candidateregisteration extends StatelessWidget {
+class candidateregisteration extends StatefulWidget {
   const candidateregisteration({Key? key});
 
   @override
+  State<candidateregisteration> createState() => _candidateregisterationState();
+}
+
+final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+final TextEditingController _dateController = TextEditingController();
+
+class _candidateregisterationState extends State<candidateregisteration> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       backgroundColor: color,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -339,16 +349,23 @@ class candidateregisteration extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(left: 85),
                           child: TextFormField(
+                            controller: _dateController,
                             decoration: const InputDecoration(
                               labelText: 'Date of Joining',
                               labelStyle: TextStyle(
                                 color: Colors.black,
                                 fontSize: 16,
+
                                 //fontWeight: FontWeight.bold,
                               ),
+                              suffixIcon: Icon(Icons.calendar_today),
                               enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none),
                             ),
+                            readOnly: true,
+                            onTap: () {
+                              _selectDate();
+                            },
                           ),
                         )
                       ],
@@ -1081,5 +1098,20 @@ class candidateregisteration extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _selectDate() async {
+    DateTime? _picked = await showDatePicker(
+      context: _scaffoldKey.currentContext!,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2025),
+      initialDate: DateTime.now(),
+    );
+
+    if (_picked != null) {
+      setState(() {
+        _dateController.text = _picked.toString().split(" ")[0];
+      });
+    }
   }
 }
