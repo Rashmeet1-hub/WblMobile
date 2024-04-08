@@ -18,6 +18,7 @@ Color colorCard =
     Color(int.parse(hexColorCard.substring(1, 7), radix: 16) + 0xFF000000);
 DateTime date = DateTime(2024, 12, 31);
 
+// ignore: camel_case_types
 class candidateregisteration extends StatelessWidget {
   const candidateregisteration({Key? key});
 
