@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signature_pad/flutter_signature_pad.dart';
 
 String hexColor = "#FFF8F0";
 Color color =
