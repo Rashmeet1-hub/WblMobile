@@ -515,16 +515,19 @@ class _candidateregisterationState extends State<candidateregisteration> {
                           ),
                         ),
                         TextFormField(
+                          controller: _dateController,
                           textCapitalization: TextCapitalization.words,
                           decoration: InputDecoration(
-                            labelText: 'Last Name ',
+                            labelText: 'Date of Birth ',
                             labelStyle: const TextStyle(
                               color: Colors.black,
                               fontSize: 16,
                               //fontWeight: FontWeight.bold,
                             ),
+                            suffixIcon: Icon(Icons.calendar_today),
+
                             contentPadding: const EdgeInsets.only(top: 3),
-                            hintText: 'Enter your Last name',
+                            hintText: 'Enter your Dob',
                             hintStyle: const TextStyle(
                               color: Colors.black,
                               //fontSize: 16,
@@ -541,6 +544,10 @@ class _candidateregisterationState extends State<candidateregisteration> {
                               borderSide: const BorderSide(color: Colors.red),
                             ),
                           ),
+                          readOnly: true,
+                          onTap: () {
+                            _selectDate();
+                          },
                         ),
                         TextFormField(
                           textCapitalization: TextCapitalization.words,
