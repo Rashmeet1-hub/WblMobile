@@ -1,7 +1,6 @@
 // ignore: avoid_web_libraries_in_flutter
 
 import 'package:flutter/material.dart';
-import 'package:flutter_signature_pad/flutter_signature_pad.dart';
 
 String hexColor = "#FFF8F0";
 Color color =
@@ -1095,6 +1094,7 @@ class _candidateregisterationState extends State<candidateregisteration> {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
+                            backgroundColor: color,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(14),
                               side: BorderSide(color: colorButton),
