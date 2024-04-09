@@ -29,6 +29,7 @@ class candidateregisteration extends StatefulWidget {
 
 final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 final TextEditingController _dateController = TextEditingController();
+final TextEditingController _dateController1 = TextEditingController();
 
 class _candidateregisterationState extends State<candidateregisteration> {
   @override
@@ -515,7 +516,7 @@ class _candidateregisterationState extends State<candidateregisteration> {
                           ),
                         ),
                         TextFormField(
-                          controller: _dateController,
+                          controller: _dateController1,
                           textCapitalization: TextCapitalization.words,
                           decoration: InputDecoration(
                             labelText: 'Date of Birth ',
@@ -546,7 +547,7 @@ class _candidateregisterationState extends State<candidateregisteration> {
                           ),
                           readOnly: true,
                           onTap: () {
-                            _selectDate();
+                            _selectDateOfBirth();
                           },
                         ),
                         TextFormField(
@@ -1118,6 +1119,21 @@ class _candidateregisterationState extends State<candidateregisteration> {
     if (_picked != null) {
       setState(() {
         _dateController.text = _picked.toString().split(" ")[0];
+      });
+    }
+  }
+
+  Future<void> _selectDateOfBirth() async {
+    DateTime? _picked1 = await showDatePicker(
+      context: _scaffoldKey.currentContext!,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2025),
+      initialDate: DateTime.now(),
+    );
+
+    if (_picked1 != null) {
+      setState(() {
+        _dateController1.text = _picked1.toString().split(" ")[0];
       });
     }
   }
