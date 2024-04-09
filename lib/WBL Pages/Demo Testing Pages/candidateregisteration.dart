@@ -671,33 +671,77 @@ class _candidateregisterationState extends State<candidateregisteration> {
                       const SizedBox(
                         height: 1,
                       ),
-                      TextFormField(
-                        textCapitalization: TextCapitalization.words,
-                        decoration: InputDecoration(
-                          labelText: 'State ',
-                          labelStyle: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            //fontWeight: FontWeight.bold,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                DropdownButton<String>(
+                                  menuMaxHeight: 400,
+                                  items: <String>[
+                                    'Select State', // Placeholder
+
+                                    'Andaman & Nicobar Islands',
+                                    'Andhra Pradesh',
+                                    'Arunachal Pradesh',
+                                    'Assam',
+                                    'Bihar',
+                                    'Chandigarh',
+                                    'Chhattisgarh',
+                                    'Dadra & Nagar Haveli',
+                                    'Daman & Diu',
+                                    'Delhi',
+                                    'Goa',
+                                    'Gujarat',
+                                    'Haryana',
+                                    'Himachal Pradesh',
+                                    'Jammu & Kashmir',
+                                    'Jharkhand',
+                                    'Karnataka',
+                                    'Kerala',
+                                    'Ladakh',
+                                    'Lakshadweep',
+                                    'Madhya Pradesh',
+                                    'Maharashtra',
+                                    'Manipur',
+                                    'Meghalaya',
+                                    'Mizoram',
+                                    'Nagaland',
+                                    'Odisha',
+                                    'Puducherry',
+                                    'Punjab',
+                                    'Rajasthan',
+                                    'Sikkim',
+                                    'Tamil Nadu',
+                                    'Telangana',
+                                    'Tripura',
+                                    'Uttar Pradesh',
+                                    'Uttarakhand',
+                                    'West Bengal',
+                                  ].map((String value) {
+                                    return DropdownMenuItem<String>(
+                                      value: value,
+                                      child: Text(value),
+                                    );
+                                  }).toList(),
+                                  hint: const Text(
+                                    'Select State', // Updated hint text
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  onChanged: (String? newValue) {
+                                    // Your logic here
+                                  },
+                                  isExpanded: true,
+                                  value: null, // Set value to null for hint
+                                ),
+                              ],
+                            ),
                           ),
-                          contentPadding: const EdgeInsets.only(top: 3),
-                          hintText: 'Enter your State',
-                          hintStyle: const TextStyle(
-                            color: Colors.black,
-                            //fontSize: 16,
-                          ),
-                          enabledBorder: const OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                          ),
-                          // contentPadding: const EdgeInsets.symmetric(
-                          //   vertical: 12.0,
-                          //   horizontal: 16.0,
-                          // ),
-                          focusedErrorBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.0),
-                            borderSide: const BorderSide(color: Colors.red),
-                          ),
-                        ),
+                        ],
                       ),
                       TextFormField(
                         textCapitalization: TextCapitalization.words,
