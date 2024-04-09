@@ -28,7 +28,19 @@ class loginscreen extends StatelessWidget {
                 width: 340.69,
                 // fit: BoxFit.cover,
               ),
-              const SizedBox(height: 100),
+              const SizedBox(height: 72),
+              Center(
+                child: Text(
+                  'Select Login',
+                  style: TextStyle(
+                      color: colorButton,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              SizedBox(
+                height: 34,
+              ),
               FractionallySizedBox(
                 widthFactor: 1.0,
                 child: TextButton(

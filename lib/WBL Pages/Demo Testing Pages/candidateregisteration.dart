@@ -30,6 +30,7 @@ final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 final TextEditingController _dateController = TextEditingController();
 final TextEditingController _dateController1 = TextEditingController();
 
+// ignore: camel_case_types
 class _candidateregisterationState extends State<candidateregisteration> {
   @override
   Widget build(BuildContext context) {
@@ -524,7 +525,7 @@ class _candidateregisterationState extends State<candidateregisteration> {
                               fontSize: 16,
                               //fontWeight: FontWeight.bold,
                             ),
-                            suffixIcon: Icon(Icons.calendar_today),
+                            suffixIcon: const Icon(Icons.calendar_today),
 
                             contentPadding: const EdgeInsets.only(top: 3),
                             hintText: 'Enter your Dob',
