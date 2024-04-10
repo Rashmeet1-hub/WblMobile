@@ -38,7 +38,7 @@ class loginscreen extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 34,
               ),
               FractionallySizedBox(

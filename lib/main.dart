@@ -24,11 +24,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const WelcomePage(),
-      home: const loginscreen(),
+      //home: const loginscreen(),
       //home: const candidateLogin(),
       //home: const adminLogin(),
 
-      //home: const adminregisteration(),
+      home: const adminregisteration(),
       //home: const candidateregisteration(),
     );
   }

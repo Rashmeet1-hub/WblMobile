@@ -450,14 +450,14 @@ class adminregisteration extends StatelessWidget {
                             //crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Your Signature',
+                                "Director's Signature",
                                 style:
                                     TextStyle(color: Colors.black, fontSize: 16
                                         //fontWeight: FontWeight.bold
                                         ),
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 100),
+                                padding: EdgeInsets.only(left: 60),
                                 child: const IconButton(
                                     onPressed: null,
                                     icon: Icon(Icons.edit_document)),
