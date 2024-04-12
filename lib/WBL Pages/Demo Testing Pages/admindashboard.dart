@@ -16,6 +16,21 @@ String hexColorCard = "#E5F3DD";
 Color colorCard =
     Color(int.parse(hexColorCard.substring(1, 7), radix: 16) + 0xFF000000);
 const IconData logout = IconData(0xe3b3, fontFamily: 'MaterialIcons');
+String hexColorEnrolled = "#F8F9FE";
+Color colorEnrolled =
+    Color(int.parse(hexColorEnrolled.substring(1, 7), radix: 16) + 0xFF000000);
+String hexColorDropped = "#FFFBF2";
+Color colorDropped =
+    Color(int.parse(hexColorDropped.substring(1, 7), radix: 16) + 0xFF000000);
+String hexColorCompleted = "#EDFFF1";
+Color colorCompleted =
+    Color(int.parse(hexColorCompleted.substring(1, 7), radix: 16) + 0xFF000000);
+String hexColorVacancies = "#F8F2FE";
+Color colorVacancies =
+    Color(int.parse(hexColorVacancies.substring(1, 7), radix: 16) + 0xFF000000);
+String hexColorTarget = "#EDFBFC";
+Color colorTarget =
+    Color(int.parse(hexColorTarget.substring(1, 7), radix: 16) + 0xFF000000);
 
 // ignore: camel_case_types
 class admindashboard extends StatelessWidget {
@@ -244,6 +259,197 @@ class admindashboard extends StatelessWidget {
             child: Text(
               'Dashboard Data',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 65,
+            child: ListTile(
+              tileColor: colorEnrolled,
+              contentPadding: const EdgeInsets.only(left: 10),
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Image.asset(
+                  'assets/i1.png',
+                  width: 49,
+                  height: 49,
+                ),
+              ),
+              title: const Text(
+                'Enrolled',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              trailing: const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Text(
+                  '39',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 65,
+            child: ListTile(
+              tileColor: colorDropped,
+              contentPadding: const EdgeInsets.only(left: 10),
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Image.asset(
+                  'assets/i2.png',
+                  width: 49,
+                  height: 49,
+                ),
+              ),
+              title: const Text(
+                'Dropped',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              trailing: const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Text(
+                  '1',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 65,
+            child: ListTile(
+              tileColor: colorCompleted,
+              contentPadding: const EdgeInsets.only(left: 10),
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Image.asset(
+                  'assets/i3.png',
+                  width: 49,
+                  height: 49,
+                ),
+              ),
+              title: const Text(
+                'Completed',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              trailing: const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Text(
+                  '14',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 72,
+            child: ListTile(
+              tileColor: colorDropped,
+              contentPadding: const EdgeInsets.only(left: 10),
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Image.asset(
+                  'assets/i4.png',
+                  width: 49,
+                  height: 49,
+                ),
+              ),
+              title: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Stipend ',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Dispersed ',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              trailing: const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Text(
+                  '100000',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 72,
+            child: ListTile(
+              tileColor: colorVacancies,
+              contentPadding: const EdgeInsets.only(left: 10),
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Image.asset(
+                  'assets/i5.png',
+                  width: 49,
+                  height: 49,
+                ),
+              ),
+              title: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Total ',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Vacancies ',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              trailing: const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Text(
+                  '32',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            height: 72,
+            child: ListTile(
+              tileColor: colorTarget,
+              contentPadding: const EdgeInsets.only(left: 10),
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Image.asset(
+                  'assets/i6.png',
+                  width: 49,
+                  height: 49,
+                ),
+              ),
+              title: const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Target ',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Achieved ',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              trailing: const Padding(
+                padding: EdgeInsets.only(right: 20),
+                child: Column(
+                  children: [
+                    Text(
+                      '40',
+                      style:
+                          TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
