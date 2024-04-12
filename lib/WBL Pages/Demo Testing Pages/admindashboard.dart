@@ -60,6 +60,47 @@ class admindashboard extends StatelessWidget {
           )
         ],
       ),
+      body: Column(
+        children: [
+          Container(
+            child: const Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(15, 11, 0, 0),
+                  child: CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage('assets/Ellipse 26.png'),
+                  ),
+                ),
+                Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 20, top: 26),
+                      child: Text(
+                        'Hi! Munish Ratti(Manager)',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 1),
+                      child: Text(
+                        'CDAC,Mohali(PI)',
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
