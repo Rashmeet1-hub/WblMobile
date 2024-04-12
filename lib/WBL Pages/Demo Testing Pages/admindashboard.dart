@@ -32,8 +32,6 @@ class admindashboard extends StatelessWidget {
               color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-
-        // Add the leading property here
         leading: Padding(
           padding: const EdgeInsets.only(left: 15.0),
           child: Image.asset(
@@ -61,6 +59,7 @@ class admindashboard extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             child: const Row(
@@ -98,7 +97,142 @@ class admindashboard extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(15, 20, 0, 0),
+            child: Text(
+              'Selected Filters',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Container(
+                  width: 71,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    color: colorCard,
+                  ),
+                  child: DropdownButton<String>(
+                    items: <String>['Center 1', 'Center 2', 'Center 3']
+                        .map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      // Your logic here
+                    },
+                    isExpanded: true,
+                    value: null, // Set value to null for hint
+                    hint: const Text(
+                      'All', // Hint text
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Container(
+                  width: 71,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    color: colorCard,
+                  ),
+                  child: DropdownButton<String>(
+                    items: <String>['Center 1', 'Center 2', 'Center 3']
+                        .map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      // Your logic here
+                    },
+                    isExpanded: true,
+                    value: null, // Set value to null for hint
+                    hint: const Text(
+                      'All', // Hint text
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Container(
+                  width: 71,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    color: colorCard,
+                  ),
+                  child: DropdownButton<String>(
+                    items: <String>['Center 1', 'Center 2', 'Center 3']
+                        .map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      // Your logic here
+                    },
+                    isExpanded: true,
+                    value: null, // Set value to null for hint
+                    hint: const Text(
+                      'All', // Hint text
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 22),
+                child: Container(
+                  width: 71,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(11),
+                    color: colorCard,
+                  ),
+                  child: DropdownButton<String>(
+                    items: <String>['Center 1', 'Center 2', 'Center 3']
+                        .map((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                    onChanged: (String? newValue) {
+                      // Your logic here
+                    },
+                    isExpanded: true,
+                    value: null, // Set value to null for hint
+                    hint: const Text(
+                      'All', // Hint text
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
