@@ -105,133 +105,146 @@ class admindashboard extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Container(
-                  width: 71,
-                  height: 42,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: colorCard,
-                  ),
-                  child: DropdownButton<String>(
-                    items: <String>['Center 1', 'Center 2', 'Center 3']
-                        .map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {
-                      // Your logic here
-                    },
-                    isExpanded: true,
-                    value: null, // Set value to null for hint
-                    hint: const Text(
-                      'All', // Hint text
-                      style: TextStyle(
-                        color: Colors.black,
+          Padding(
+            padding: const EdgeInsets.only(top: 11),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Container(
+                    width: 71,
+                    height: 42,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(11),
+                      color: colorCard,
+                    ),
+                    child: DropdownButton<String>(
+                      items: <String>['Center 1', 'Center 2', 'Center 3']
+                          .map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        // Your logic here
+                      },
+                      isExpanded: true,
+                      value: null, // Set value to null for hint
+                      hint: const Text(
+                        'All', // Hint text
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Container(
-                  width: 71,
-                  height: 42,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: colorCard,
-                  ),
-                  child: DropdownButton<String>(
-                    items: <String>['Center 1', 'Center 2', 'Center 3']
-                        .map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {
-                      // Your logic here
-                    },
-                    isExpanded: true,
-                    value: null, // Set value to null for hint
-                    hint: const Text(
-                      'All', // Hint text
-                      style: TextStyle(
-                        color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Container(
+                    width: 71,
+                    height: 42,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(11),
+                      color: colorCard,
+                    ),
+                    child: DropdownButton<String>(
+                      items: <String>['Center 1', 'Center 2', 'Center 3']
+                          .map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        // Your logic here
+                      },
+                      isExpanded: true,
+                      value: null, // Set value to null for hint
+                      hint: const Text(
+                        'All', // Hint text
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Container(
-                  width: 71,
-                  height: 42,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: colorCard,
-                  ),
-                  child: DropdownButton<String>(
-                    items: <String>['Center 1', 'Center 2', 'Center 3']
-                        .map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {
-                      // Your logic here
-                    },
-                    isExpanded: true,
-                    value: null, // Set value to null for hint
-                    hint: const Text(
-                      'All', // Hint text
-                      style: TextStyle(
-                        color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Container(
+                    width: 71,
+                    height: 42,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(11),
+                      color: colorCard,
+                    ),
+                    child: DropdownButton<String>(
+                      items: <String>['Center 1', 'Center 2', 'Center 3']
+                          .map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        // Your logic here
+                      },
+                      isExpanded: true,
+                      value: null, // Set value to null for hint
+                      hint: const Text(
+                        'All', // Hint text
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, right: 22),
-                child: Container(
-                  width: 71,
-                  height: 42,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(11),
-                    color: colorCard,
-                  ),
-                  child: DropdownButton<String>(
-                    items: <String>['Center 1', 'Center 2', 'Center 3']
-                        .map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {
-                      // Your logic here
-                    },
-                    isExpanded: true,
-                    value: null, // Set value to null for hint
-                    hint: const Text(
-                      'All', // Hint text
-                      style: TextStyle(
-                        color: Colors.black,
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 22),
+                  child: Container(
+                    width: 71,
+                    height: 42,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(11),
+                      color: colorCard,
+                    ),
+                    child: DropdownButton<String>(
+                      items: <String>['Center 1', 'Center 2', 'Center 3']
+                          .map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        // Your logic here
+                      },
+                      isExpanded: true,
+                      value: null, // Set value to null for hint
+                      hint: const Text(
+                        'All', // Hint text
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 23,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 15),
+            child: Text(
+              'Dashboard Data',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
