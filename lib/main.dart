@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       //home: const candidateLogin(),
       //home: const adminLogin(),
 
-      //home: const adminregisteration(),
+      // home: const adminregisteration(),
       //home: const candidateregisteration(),
       home: const admindashboard(),
     );

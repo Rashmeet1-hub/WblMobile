@@ -462,38 +462,48 @@ class admindashboard extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
             icon: IconButton(
               onPressed: () {},
-              icon: Image.asset('assets/Frame 20.png'),
+              icon: Image.asset(
+                'assets/dashboard.jpeg',
+                width: 30,
+                height: 30,
+              ),
             ),
-            label: ''),
-        BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {},
-              icon: Image.asset('assets/Vacancy Icon.png'),
-            ),
-            label: ''),
-        BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {},
-              icon: Image.asset('assets/Stipend.png'),
-            ),
-            label: ''),
-        BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {},
-              icon: Image.asset('assets/Report.png'),
-            ),
-            label: ''),
-        BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {},
-              icon: Image.asset('assets/Candidate List.png'),
-            ),
-            label: ''),
-      ]),
+            label: 'Dashboard',
+          ),
+          BottomNavigationBarItem(
+              icon: IconButton(
+                onPressed: () {},
+                icon: Image.asset('assets/Vacancy Icon.png'),
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: IconButton(
+                onPressed: () {},
+                icon: Image.asset('assets/Stipend.png'),
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: IconButton(
+                onPressed: () {},
+                icon: Image.asset('assets/Report.png'),
+              ),
+              label: ''),
+          BottomNavigationBarItem(
+              icon: IconButton(
+                onPressed: () {},
+                icon: Image.asset('assets/Candidate List.png'),
+              ),
+              label: ''),
+        ],
+        selectedLabelStyle: TextStyle(
+            fontSize: 12, fontWeight: FontWeight.bold, color: colorBar),
+        selectedItemColor: colorBar,
+      ),
     );
   }
 }
