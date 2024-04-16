@@ -486,15 +486,16 @@ class admindashboard extends StatelessWidget {
               ),
               label: 'Vacancy'),
           BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {},
-                icon: Image.asset(
-                  'assets/Stipend.jpeg',
-                  height: 30,
-                  width: 30,
-                ),
+            icon: IconButton(
+              onPressed: () {},
+              icon: Image.asset(
+                'assets/Stipend.jpeg',
+                height: 30,
+                width: 30,
               ),
-              label: ''),
+            ),
+            label: 'Stipend',
+          ),
           BottomNavigationBarItem(
               icon: IconButton(
                 onPressed: () {},
@@ -514,14 +515,22 @@ class admindashboard extends StatelessWidget {
                   width: 30,
                 ),
               ),
-              label: ''),
+              label: 'Candidate List'),
         ],
         selectedLabelStyle: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.bold,
           color: colorBar, // Use the same color as the Dashboard label
         ),
+        unselectedLabelStyle: TextStyle(
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+          color: colorBar,
+        ),
         selectedItemColor: colorBar,
+        unselectedItemColor: colorBar,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
       ),
     );
   }
