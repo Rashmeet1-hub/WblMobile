@@ -478,30 +478,49 @@ class admindashboard extends StatelessWidget {
           BottomNavigationBarItem(
               icon: IconButton(
                 onPressed: () {},
-                icon: Image.asset('assets/Vacancy Icon.png'),
+                icon: Image.asset(
+                  'assets/Vacancy.jpeg',
+                  width: 40,
+                  height: 40,
+                ),
+              ),
+              label: 'Vacancy'),
+          BottomNavigationBarItem(
+              icon: IconButton(
+                onPressed: () {},
+                icon: Image.asset(
+                  'assets/Stipend.jpeg',
+                  height: 30,
+                  width: 30,
+                ),
               ),
               label: ''),
           BottomNavigationBarItem(
               icon: IconButton(
                 onPressed: () {},
-                icon: Image.asset('assets/Stipend.png'),
+                icon: Image.asset(
+                  'assets/Reports.jpeg',
+                  height: 30,
+                  width: 30,
+                ),
               ),
-              label: ''),
+              label: 'Reports'),
           BottomNavigationBarItem(
               icon: IconButton(
                 onPressed: () {},
-                icon: Image.asset('assets/Report.png'),
-              ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: IconButton(
-                onPressed: () {},
-                icon: Image.asset('assets/Candidate List.png'),
+                icon: Image.asset(
+                  'assets/candidate_List.jpeg',
+                  height: 30,
+                  width: 30,
+                ),
               ),
               label: ''),
         ],
         selectedLabelStyle: TextStyle(
-            fontSize: 12, fontWeight: FontWeight.bold, color: colorBar),
+          fontSize: 12,
+          fontWeight: FontWeight.bold,
+          color: colorBar, // Use the same color as the Dashboard label
+        ),
         selectedItemColor: colorBar,
       ),
     );
