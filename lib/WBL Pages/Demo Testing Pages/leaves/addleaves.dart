@@ -227,7 +227,7 @@ class _addLeavesState extends State<addLeaves> {
                   color: colorCard,
                 ),
                 child: TextFormField(
-                  controller: _dateController1,
+                  controller: _dateController,
                   textCapitalization: TextCapitalization.words,
                   decoration: InputDecoration(
                     labelText: 'Start Date ',
@@ -263,6 +263,85 @@ class _addLeavesState extends State<addLeaves> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Container(
+                height: 62,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: colorCard,
+                ),
+                child: TextFormField(
+                  controller: _dateController1,
+                  textCapitalization: TextCapitalization.words,
+                  decoration: InputDecoration(
+                    labelText: 'End Date ',
+                    labelStyle: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      //fontWeight: FontWeight.bold,
+                    ),
+                    suffixIcon: const Icon(Icons.calendar_today),
+
+                    contentPadding: const EdgeInsets.only(top: 3),
+                    hintText: 'End Date',
+                    hintStyle: const TextStyle(
+                      color: Colors.black,
+                      //fontSize: 16,
+                    ),
+                    enabledBorder: const OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                    ),
+                    // contentPadding: const EdgeInsets.symmetric(
+                    //   vertical: 12.0,
+                    //   horizontal: 16.0,
+                    // ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Colors.red),
+                    ),
+                  ),
+                  readOnly: true,
+                  onTap: () {
+                    _selectDateOfBirth();
+                  },
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 110),
+              child: SizedBox(
+                //width: double.infinity,
+                width: 160,
+                child: Container(
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: colorBar,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                        side: BorderSide(color: colorButton),
+                      ),
+                    ),
+                    child: const Text(
+                      'Submit',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
@@ -280,6 +359,21 @@ class _addLeavesState extends State<addLeaves> {
     if (_picked != null) {
       setState(() {
         _dateController.text = _picked.toString().split(" ")[0];
+      });
+    }
+  }
+
+  Future<void> _selectDateOfBirth() async {
+    DateTime? _picked1 = await showDatePicker(
+      context: _scaffoldKey.currentContext!,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2025),
+      initialDate: DateTime.now(),
+    );
+
+    if (_picked1 != null) {
+      setState(() {
+        _dateController1.text = _picked1.toString().split(" ")[0];
       });
     }
   }
