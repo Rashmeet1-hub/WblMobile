@@ -32,12 +32,22 @@ String hexColorTarget = "#EDFBFC";
 Color colorTarget =
     Color(int.parse(hexColorTarget.substring(1, 7), radix: 16) + 0xFF000000);
 
-class addLeaves extends StatelessWidget {
+class addLeaves extends StatefulWidget {
   const addLeaves({Key? key}) : super(key: key);
 
   @override
+  State<addLeaves> createState() => _addLeavesState();
+}
+
+final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+final TextEditingController _dateController = TextEditingController();
+final TextEditingController _dateController1 = TextEditingController();
+
+class _addLeavesState extends State<addLeaves> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         backgroundColor: colorBar,
         title: const Text(
@@ -205,9 +215,72 @@ class addLeaves extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Container(
+                height: 62,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: colorCard,
+                ),
+                child: TextFormField(
+                  controller: _dateController1,
+                  textCapitalization: TextCapitalization.words,
+                  decoration: InputDecoration(
+                    labelText: 'Start Date ',
+                    labelStyle: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      //fontWeight: FontWeight.bold,
+                    ),
+                    suffixIcon: const Icon(Icons.calendar_today),
+
+                    contentPadding: const EdgeInsets.only(top: 3),
+                    hintText: 'Start Date',
+                    hintStyle: const TextStyle(
+                      color: Colors.black,
+                      //fontSize: 16,
+                    ),
+                    enabledBorder: const OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                    ),
+                    // contentPadding: const EdgeInsets.symmetric(
+                    //   vertical: 12.0,
+                    //   horizontal: 16.0,
+                    // ),
+                    focusedErrorBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                      borderSide: const BorderSide(color: Colors.red),
+                    ),
+                  ),
+                  readOnly: true,
+                  onTap: () {
+                    _selectDate();
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> _selectDate() async {
+    DateTime? _picked = await showDatePicker(
+      context: _scaffoldKey.currentContext!,
+      firstDate: DateTime(2000),
+      lastDate: DateTime(2025),
+      initialDate: DateTime.now(),
+    );
+
+    if (_picked != null) {
+      setState(() {
+        _dateController.text = _picked.toString().split(" ")[0];
+      });
+    }
   }
 }
