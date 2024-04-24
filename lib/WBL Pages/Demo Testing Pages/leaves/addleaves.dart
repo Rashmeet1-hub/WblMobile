@@ -33,7 +33,7 @@ Color colorTarget =
     Color(int.parse(hexColorTarget.substring(1, 7), radix: 16) + 0xFF000000);
 
 class addLeaves extends StatelessWidget {
-  const addLeaves({super.key});
+  const addLeaves({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -80,16 +80,21 @@ class addLeaves extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              child: const Row(
+              child: Row(
                 children: [
                   Padding(
-                    padding: EdgeInsets.fromLTRB(15, 11, 0, 0),
-                    child: CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage('assets/Ellipse 26.png'),
+                    padding: const EdgeInsets.fromLTRB(15, 11, 0, 0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(color: colorBar, width: 4)),
+                      child: const CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage('assets/Ellipse 26.png'),
+                      ),
                     ),
                   ),
-                  Column(
+                  const Column(
                     children: [
                       Padding(
                         padding: EdgeInsets.only(left: 20, top: 26),
@@ -102,7 +107,7 @@ class addLeaves extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 29),
+                        padding: EdgeInsets.only(left: 10),
                         child: Text(
                           'STU675638963892698b563',
                           style: TextStyle(
@@ -112,7 +117,7 @@ class addLeaves extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 29),
+                        padding: EdgeInsets.only(left: 10),
                         child: Text(
                           'Harsh296@gmail.com',
                           style: TextStyle(
@@ -124,6 +129,80 @@ class addLeaves extends StatelessWidget {
                     ],
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Container(
+                height: 62,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: colorCard,
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: DropdownButton<String>(
+                  items: <String>[
+                    'Medical Leave',
+                    'Casual leave',
+                    'Loss of Pay'
+                  ].map((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    // Your logic here
+                  },
+                  isExpanded: true,
+                  value: null, // Set value to null for hint
+                  hint: const Text(
+                    'Leave Type', // Hint text
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10, right: 10),
+              child: Container(
+                height: 62,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14),
+                  color: colorCard,
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: DropdownButton<String>(
+                  items: <String>[
+                    'Medical Leave',
+                    'Casual leave',
+                    'Loss of Pay'
+                  ].map((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                  onChanged: (String? newValue) {
+                    // Your logic here
+                  },
+                  isExpanded: true,
+                  value: null, // Set value to null for hint
+                  hint: const Text(
+                    'Leave Day', // Hint text
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
               ),
             ),
           ],
